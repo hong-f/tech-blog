@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Tech Blog</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="flex-column justify-space-around">
+        <header>
+            <nav>
+                <ul class="display-flex justify-space-between">
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/dashboard">
+                        <li>Dashboard</li>
+                    </a>
+                    {{#if logged_in}}
+                    <a href="">
+                        <li id="logout">Logout</li>
+                    </a>
+                    {{else}}
+                    <a href="/login">
+                        <li>Login</li>
+                    </a>
+                    {{/if}}
+                </ul>
+            </nav>
+            <h1>
+                <a href="/">MVC Tech Blog</a>
+            </h1>
+        </header>
+        <main class="container container-fluid mt-5">
+            {{{ body }}}
+        </main>
+        <footer>
+        </footer>
+    </div>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
