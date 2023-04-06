@@ -1,0 +1,24 @@
+<section class="edit-post-form-wrapper">
+    <div class="row">
+        <h2>Edit your tech blog post</h2>
+
+        <form class="form edit-post-form">
+            <div class="form-group">
+                <label for="post-title">Title:</label>
+                <input class="form-input" type="text" id="post-title" value="{{title}}" />
+            </div>
+            <div class="form-group">
+                <label for="post-contents">Contents:</label>
+                <textarea class="form-input" name="post-contents" id="post-contents" cols="30"
+                    rows="4">{{contents}}</textarea>
+            </div>
+            <div class="form-group">
+                <button class="edit-post-button btn btn-primary" data-id="{{id}}" type="submit">Update</button>
+                <button class="delete-post-button btn btn-danger" data-id="{{id}}" type=" button">Delete</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script src="/js/editPost.js"></script>
+<script src="/js/deletePost.js"></script>
