@@ -1,0 +1,19 @@
+<section class="dashboard-wrapper">
+  {{#if posts.length}}
+  <h3>Your Posts:</h3>
+
+  {{#each posts as |post|}}
+  <div class="post-container m-2">
+    <div class="display-flex justify-space-between align-center p-1">
+      <h4><a href="/dashboard/{{post.id}}">{{post.title}}</a></h4>
+      <p>{{format_date post.date_created}}</p>
+    </div>
+  </div>
+  {{/each}}
+  {{/if}}
+  <div class="display-flex justify-center align-center">
+    <button class="create-post-button btn btn-primary">Create a new blog post</button>
+  </div>
+</section>
+
+<script src="/js/createPost.js"></script>
