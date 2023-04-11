@@ -1,0 +1,17 @@
+[
+    {
+        "title": "How to prepare for technical interviews?",
+        "contents": "Preparing for any interview can feel overwhelming.",
+        "user_id": 1
+    },
+    {
+        "title": "Where do I begin to learn to code?",
+        "contents": "Coding bootcamp can be a great place to start learning.",
+        "user_id": 2
+    },
+    {
+        "title": "What does MAANG stand for?",
+        "contents": "Meta, Apple, Amazon, and Google",
+        "user_id": 3
+    }
+]
