@@ -1,0 +1,15 @@
+<section class="homepage-wrapper">
+  {{#each posts as |post| }}
+  <div class="post-container m-2">
+    <div class="post-header display-flex justify-space-between align-center p-1">
+      <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+      <p>Posted by {{post.user.username}} on {{format_date post.date_created}}</p>
+    </div>
+    <div class="post-body p-1">
+      <p>
+        {{post.contents}}
+      </p>
+    </div>
+  </div>
+  {{/each}}
+</section>

@@ -1,0 +1,36 @@
+<section class="one-post-wrapper">
+    <div class="post-container m-2">
+        <div class="post-header display-flex justify-space-between align-center p-1">
+            <h4>{{title}}</h4>
+            <p>Posted created by {{user.username}} on {{format_date date_created}}</p>
+        </div>
+        <div class="post-body p-1">
+            <p>
+                {{contents}}
+            </p>
+        </div>
+    </div>
+    {{#if comments.length}}
+    {{#each comments as |comment|}}
+    <p class="m-2">Comments:</p>
+    <div class="post-container display-flex justify-space-between align-center m-2 p-2">
+        <p>{{comment.comment}}</p>
+        <p>Posted created by {{comment.user.username}} on {{format_date comment.date_created}}</p>
+    </div>
+    {{/each}}
+    {{/if}}
+
+    <div class="post-container m-2 p-2">
+        <form class="form new-comment-form">
+            <div class="form-group">
+                <label for="comment">Comments:</label>
+                <textarea class="form-input" name="comment" id="comment" cols="30" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="create-comment-button btn btn-primary" type="submit" data-id="{{id}}">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script src="/js/createComment.js"></script>
