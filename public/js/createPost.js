@@ -1,11 +1,11 @@
-// post button
+// post 
 const createPostButtonHandler = async (event) => {
     event.preventDefault();
 
     document.location.replace('/dashboard/new');
 };
 
-// new post
+// new 
 const newPostFormHandler = async (event) => {
     event.preventDefault();
 
